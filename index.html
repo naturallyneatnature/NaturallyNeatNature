@@ -11,33 +11,7 @@
   <title>NaturallyNeatNature Photography</title>
 
   <style>
-.category-title {
 
-  text-align: center;
-
-  padding: 60px 20px 20px;
-
-}
-
-.category-title h2 {
-
-  font-size: 2.2rem;
-
-  margin-bottom: 10px;
-
-}
-
-.category-title p {
-
-  max-width: 700px;
-
-  margin: auto;
-
-  color: #bbb;
-
-  line-height: 1.6;
-
-}
     body {
 
       margin: 0;
@@ -72,13 +46,13 @@
 
     header h1 {
 
-  font-size: clamp(2.2rem, 7vw, 4.5rem);
+      font-size: clamp(2.2rem, 7vw, 4.5rem);
 
-  margin-bottom: 10px;
+      margin-bottom: 10px;
 
-  line-height: 1.05;
+      line-height: 1.05;
 
-}
+    }
 
     header p {
 
@@ -120,6 +94,34 @@
 
     }
 
+    .category-title {
+
+      text-align: center;
+
+      padding: 60px 20px 20px;
+
+    }
+
+    .category-title h2 {
+
+      font-size: 2.2rem;
+
+      margin-bottom: 10px;
+
+    }
+
+    .category-title p {
+
+      max-width: 700px;
+
+      margin: auto;
+
+      color: #bbb;
+
+      line-height: 1.6;
+
+    }
+
     h2 {
 
       text-align: center;
@@ -127,6 +129,36 @@
       font-size: 2rem;
 
       margin-bottom: 30px;
+
+    }
+
+    .sort-controls {
+
+      text-align: center;
+
+      margin: 20px auto 35px;
+
+      color: #f5f5f5;
+
+    }
+
+    .sort-controls label {
+
+      margin-right: 10px;
+
+      font-weight: bold;
+
+    }
+
+    .sort-controls select {
+
+      padding: 10px 14px;
+
+      border-radius: 8px;
+
+      border: none;
+
+      font-size: 1rem;
 
     }
 
@@ -140,6 +172,16 @@
 
     }
 
+    .gallery-item {
+
+      background: #1a1a1a;
+
+      border-radius: 12px;
+
+      overflow: hidden;
+
+    }
+
     .gallery img {
 
       width: 100%;
@@ -148,7 +190,41 @@
 
       object-fit: cover;
 
-      border-radius: 12px;
+      display: block;
+
+    }
+
+    .photo-info {
+
+      padding: 15px;
+
+      text-align: center;
+
+    }
+
+    .photo-info h3 {
+
+      margin-bottom: 8px;
+
+      font-size: 1.1rem;
+
+    }
+
+    .photo-info p {
+
+      margin: 4px 0;
+
+      color: #ccc;
+
+    }
+
+    .price {
+
+      color: #8dc63f;
+
+      font-weight: bold;
+
+      font-size: 1.1rem;
 
     }
 
@@ -190,202 +266,233 @@
 
       <p>Nature and wildlife photography prints capturing forests, mountains, rivers, landscapes, and quiet moments in the wild.</p>
 
-      <a class="btn" href="#prints">Explore Gallery</a>
+      <a class="btn" href="#gallery-section">Explore Gallery</a>
 
     </div>
 
   </header>
-<section class="category-title">
 
-  <h2>Landscape Collection</h2>
+  <section class="category-title" id="gallery-section">
 
-  <p>Quiet moments in nature captured through light, atmosphere, and wilderness.</p>
+    <h2>Landscape Collection</h2>
 
-</section>
+    <p>Quiet moments in nature captured through light, atmosphere, and wilderness.</p>
+
+  </section>
+
   <section>
 
-<div class="gallery">
+    <div class="sort-controls">
 
-<div class="gallery-item">
+      <label for="sortPrice">Sort by price:</label>
 
-  <img src="2.jpeg" alt="Contrast">
+      <select id="sortPrice">
 
-  <div class="photo-info">
+        <option value="default">Default</option>
 
-    <h3>Contrast</h3>
+        <option value="low-high">Low to High</option>
 
-    <p>8x12 Hi-Res Print • No Watermark</p>
+        <option value="high-low">High to Low</option>
 
-    <p class="price">$60.00</p>
+      </select>
 
-  </div>
+    </div>
 
-</div>
+    <div class="gallery">
 
-  <img src="IMG_2570.jpeg" alt="Dark Winter">
+      <div class="gallery-item" data-price="60">
 
-<div class="photo-info">
+        <img src="2.jpeg" alt="Contrast">
 
-    <h3>Dark Winter</h3>
+        <div class="photo-info">
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+          <h3>Contrast</h3>
 
-    <p class="price">$45.00</p>
+          <p>8x12 Hi-Res Print • No Watermark</p>
 
-  </div>
-  
-  <div class="gallery-item">
+          <p class="price">$60.00</p>
 
-  <img src="IMG_4072.jpeg" alt="Blue Fog Tree">
+        </div>
 
-  <div class="photo-info">
+      </div>
 
-    <h3>Blue Fog Tree</h3>
+      <div class="gallery-item" data-price="45">
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+        <img src="IMG_2570.jpeg" alt="Dark Winter">
 
-    <p class="price">$45.00</p>
+        <div class="photo-info">
 
-  </div>
+          <h3>Dark Winter</h3>
 
-<div class="gallery-item">
-  <img src="IMG_4280.jpeg" alt="Falls Rainbow">
-  <div class="photo-info">
+          <p>8x10 Hi-Res Print • No Watermark</p>
 
-    <h3>Falls Rainbow</h3>
+          <p class="price">$45.00</p>
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+        </div>
 
-    <p class="price">$35.00</p>
+      </div>
 
-  </div>
-<div class="gallery-item">
+      <div class="gallery-item" data-price="45">
 
-  <img src="IMG_4079.jpeg" alt="Intrigue">
+        <img src="IMG_4072.jpeg" alt="Blue Fog Tree">
 
-  <div class="photo-info">
+        <div class="photo-info">
 
-    <h3>Intrigue</h3>
+          <h3>Blue Fog Tree</h3>
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+          <p>8x10 Hi-Res Print • No Watermark</p>
 
-    <p class="price">$60.00</p>
+          <p class="price">$45.00</p>
 
-  </div>
+        </div>
 
-  <div class="gallery-item">
+      </div>
 
-  <img src="IMG_4338.jpeg" alt="Niagara">
+      <div class="gallery-item" data-price="35">
 
-  <div class="photo-info">
+        <img src="IMG_4280.jpeg" alt="Falls Rainbow">
 
-    <h3>Niagara</h3>
+        <div class="photo-info">
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+          <h3>Falls Rainbow</h3>
 
-    <p class="price">$35.00</p>
+          <p>8x10 Hi-Res Print • No Watermark</p>
 
-  </div>
+          <p class="price">$35.00</p>
 
-</div>
+        </div>
 
-<div class="gallery-item">
+      </div>
 
-  <img src="IMG_5623.jpeg" alt="In Bloom">
+      <div class="gallery-item" data-price="60">
 
-  <div class="photo-info">
+        <img src="IMG_4079.jpeg" alt="Intrigue">
 
-    <h3>In Bloom</h3>
+        <div class="photo-info">
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+          <h3>Intrigue</h3>
 
-    <p class="price">$45.00</p>
+          <p>8x10 Hi-Res Print • No Watermark</p>
 
-  </div>
+          <p class="price">$60.00</p>
 
-</div>
+        </div>
 
-<div class="gallery-item">
+      </div>
 
-  <img src="IMG_6651.jpeg" alt="Golden">
+      <div class="gallery-item" data-price="35">
 
-  <div class="photo-info">
+        <img src="IMG_4338.jpeg" alt="Niagara">
 
-    <h3>Golden</h3>
+        <div class="photo-info">
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+          <h3>Niagara</h3>
 
-    <p class="price">$35.00</p>
+          <p>8x10 Hi-Res Print • No Watermark</p>
 
-  </div>
+          <p class="price">$35.00</p>
 
-</div>
+        </div>
 
-<div class="gallery-item">
+      </div>
 
-  <img src="IMG_6654.jpeg" alt="Barn Sunset">
+      <div class="gallery-item" data-price="45">
 
-  <div class="photo-info">
+        <img src="IMG_5623.jpeg" alt="In Bloom">
 
-    <h3>Barn Sunset</h3>
+        <div class="photo-info">
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+          <h3>In Bloom</h3>
 
-    <p class="price">$40.00</p>
+          <p>8x10 Hi-Res Print • No Watermark</p>
 
-  </div>
+          <p class="price">$45.00</p>
 
-</div>
+        </div>
 
-<div class="gallery-item">
+      </div>
 
-  <img src="IMG_7666.jpeg" alt="Winter Hall">
+      <div class="gallery-item" data-price="35">
 
-  <div class="photo-info">
+        <img src="IMG_6651.jpeg" alt="Golden">
 
-    <h3>Winter Hall</h3>
+        <div class="photo-info">
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+          <h3>Golden</h3>
 
-    <p class="price">$55.00</p>
+          <p>8x10 Hi-Res Print • No Watermark</p>
 
-  </div>
+          <p class="price">$35.00</p>
 
-</div>
+        </div>
 
-<div class="gallery-item">
+      </div>
 
-  <img src="IMG_7799.jpeg" alt="Wonderland">
+      <div class="gallery-item" data-price="40">
 
-  <div class="photo-info">
+        <img src="IMG_6654.jpeg" alt="Barn Sunset">
 
-    <h3>Wonderland</h3>
+        <div class="photo-info">
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+          <h3>Barn Sunset</h3>
 
-    <p class="price">$65.00</p>
+          <p>8x10 Hi-Res Print • No Watermark</p>
 
-  </div>
+          <p class="price">$40.00</p>
 
-</div>
+        </div>
 
-<div class="gallery-item">
+      </div>
 
-  <img src="IMG_9475.jpeg" alt="Compass End">
+      <div class="gallery-item" data-price="55">
 
-  <div class="photo-info">
+        <img src="IMG_7666.jpeg" alt="Winter Hall">
 
-    <h3>Compass End</h3>
+        <div class="photo-info">
 
-    <p>8x10 Hi-Res Print • No Watermark</p>
+          <h3>Winter Hall</h3>
 
-    <p class="price">$65.00</p>
+          <p>8x10 Hi-Res Print • No Watermark</p>
 
-  </div>
+          <p class="price">$55.00</p>
 
-</div>
+        </div>
 
-</div>
+      </div>
+
+      <div class="gallery-item" data-price="65">
+
+        <img src="IMG_7799.jpeg" alt="Wonderland">
+
+        <div class="photo-info">
+
+          <h3>Wonderland</h3>
+
+          <p>8x10 Hi-Res Print • No Watermark</p>
+
+          <p class="price">$65.00</p>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-item" data-price="65">
+
+        <img src="IMG_9475.jpeg" alt="Compass End">
+
+        <div class="photo-info">
+
+          <h3>Compass End</h3>
+
+          <p>8x10 Hi-Res Print • No Watermark</p>
+
+          <p class="price">$65.00</p>
+
+        </div>
+
+      </div>
+
+    </div>
 
   </section>
 
@@ -420,6 +527,42 @@
     <p>© 2026 NaturallyNeatNature. All rights reserved.</p>
 
   </footer>
+
+  <script>
+
+    const sortSelect = document.getElementById("sortPrice");
+
+    const gallery = document.querySelector(".gallery");
+
+    const originalItems = Array.from(gallery.querySelectorAll(".gallery-item"));
+
+    sortSelect.addEventListener("change", function () {
+
+      let items = Array.from(gallery.querySelectorAll(".gallery-item"));
+
+      if (this.value === "low-high") {
+
+        items.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
+
+      }
+
+      if (this.value === "high-low") {
+
+        items.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
+
+      }
+
+      if (this.value === "default") {
+
+        items = originalItems;
+
+      }
+
+      items.forEach(item => gallery.appendChild(item));
+
+    });
+
+  </script>
 
 </body>
 
