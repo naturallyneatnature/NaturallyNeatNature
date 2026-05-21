@@ -140,25 +140,23 @@
 
     }
 
-    .sort-controls {
+    .controls {
 
       text-align: center;
 
       margin: 20px auto 35px;
 
-      color: #f5f5f5;
-
     }
 
-    .sort-controls label {
+    .controls label {
 
-      margin-right: 10px;
+      margin: 0 8px;
 
       font-weight: bold;
 
     }
 
-    .sort-controls select {
+    .controls select {
 
       padding: 10px 14px;
 
@@ -167,6 +165,8 @@
       border: none;
 
       font-size: 1rem;
+
+      margin: 8px;
 
     }
 
@@ -282,25 +282,37 @@
 
   <section class="category-title" id="gallery-section">
 
-    <h2>Landscape Collection</h2>
+    <h2>Photography Collections</h2>
 
-    <p>Quiet moments in nature captured through light, atmosphere, and wilderness.</p>
+    <p>Quiet moments in nature captured through light, atmosphere, wildlife, and wilderness.</p>
 
   </section>
 
   <section>
 
-    <div class="sort-controls">
+    <div class="controls">
 
-      <label for="sortPrice">Sort by price:</label>
+      <label for="categoryFilter">Category:</label>
+
+      <select id="categoryFilter">
+
+        <option value="all">All Photos</option>
+
+        <option value="landscape">Landscape</option>
+
+        <option value="swans">Swans</option>
+
+      </select>
+
+      <label for="sortPrice">Sort:</label>
 
       <select id="sortPrice">
 
         <option value="default">Default</option>
 
-        <option value="low-high">Low to High</option>
+        <option value="low-high">Price Low to High</option>
 
-        <option value="high-low">High to Low</option>
+        <option value="high-low">Price High to Low</option>
 
       </select>
 
@@ -308,7 +320,7 @@
 
     <div class="gallery">
 
-      <div class="gallery-item" data-price="60">
+      <div class="gallery-item" data-category="landscape" data-price="60">
 
         <img src="2.jpeg" alt="Contrast">
 
@@ -324,7 +336,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="45">
+      <div class="gallery-item" data-category="landscape" data-price="45">
 
         <img src="IMG_2570.jpeg" alt="Dark Winter">
 
@@ -340,7 +352,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="45">
+      <div class="gallery-item" data-category="landscape" data-price="45">
 
         <img src="IMG_4072.jpeg" alt="Blue Fog Tree">
 
@@ -356,7 +368,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="35">
+      <div class="gallery-item" data-category="landscape" data-price="35">
 
         <img src="IMG_4280.jpeg" alt="Falls Rainbow">
 
@@ -372,7 +384,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="60">
+      <div class="gallery-item" data-category="landscape" data-price="60">
 
         <img src="IMG_4079.jpeg" alt="Intrigue">
 
@@ -388,7 +400,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="35">
+      <div class="gallery-item" data-category="landscape" data-price="35">
 
         <img src="IMG_4338.jpeg" alt="Niagara">
 
@@ -404,7 +416,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="45">
+      <div class="gallery-item" data-category="landscape" data-price="45">
 
         <img src="IMG_5623.jpeg" alt="In Bloom">
 
@@ -420,7 +432,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="35">
+      <div class="gallery-item" data-category="landscape" data-price="35">
 
         <img src="IMG_6651.jpeg" alt="Golden">
 
@@ -436,7 +448,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="40">
+      <div class="gallery-item" data-category="landscape" data-price="40">
 
         <img src="IMG_6654.jpeg" alt="Barn Sunset">
 
@@ -452,7 +464,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="55">
+      <div class="gallery-item" data-category="landscape" data-price="55">
 
         <img src="IMG_7666.jpeg" alt="Winter Hall">
 
@@ -468,7 +480,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="65">
+      <div class="gallery-item" data-category="landscape" data-price="65">
 
         <img src="IMG_7799.jpeg" alt="Wonderland">
 
@@ -484,7 +496,7 @@
 
       </div>
 
-      <div class="gallery-item" data-price="65">
+      <div class="gallery-item" data-category="landscape" data-price="65">
 
         <img src="IMG_9475.jpeg" alt="Compass End">
 
@@ -495,6 +507,70 @@
           <p>8x10 Hi-Res Print • No Watermark</p>
 
           <p class="price">$65.00</p>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-item" data-category="swans" data-price="30">
+
+        <img src="REPLACE_SWAN_FILENAME_1.jpeg" alt="Winter Bay">
+
+        <div class="photo-info">
+
+          <h3>Winter Bay</h3>
+
+          <p>8x10 Hi-Res Print • No Watermark</p>
+
+          <p class="price">$30.00</p>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-item" data-category="swans" data-price="45">
+
+        <img src="REPLACE_SWAN_FILENAME_2.jpeg" alt="Love Story">
+
+        <div class="photo-info">
+
+          <h3>Love Story</h3>
+
+          <p>8x10 Hi-Res Print • No Watermark</p>
+
+          <p class="price">$45.00</p>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-item" data-category="swans" data-price="40">
+
+        <img src="REPLACE_SWAN_FILENAME_3.jpeg" alt="Peace">
+
+        <div class="photo-info">
+
+          <h3>Peace</h3>
+
+          <p>8x10 Hi-Res Print • No Watermark</p>
+
+          <p class="price">$40.00</p>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-item" data-category="swans" data-price="45">
+
+        <img src="REPLACE_SWAN_FILENAME_4.jpeg" alt="First Light">
+
+        <div class="photo-info">
+
+          <h3>First Light</h3>
+
+          <p>8x10 Hi-Res Print • No Watermark</p>
+
+          <p class="price">$45.00</p>
 
         </div>
 
@@ -538,37 +614,49 @@
 
   <script>
 
-    const sortSelect = document.getElementById("sortPrice");
+    const categoryFilter = document.getElementById("categoryFilter");
+
+    const sortPrice = document.getElementById("sortPrice");
 
     const gallery = document.querySelector(".gallery");
 
     const originalItems = Array.from(gallery.querySelectorAll(".gallery-item"));
 
-    sortSelect.addEventListener("change", function () {
+    function updateGallery() {
 
-      let items = Array.from(gallery.querySelectorAll(".gallery-item"));
+      let items = [...originalItems];
 
-      if (this.value === "low-high") {
+      const category = categoryFilter.value;
+
+      const sort = sortPrice.value;
+
+      if (category !== "all") {
+
+        items = items.filter(item => item.dataset.category === category);
+
+      }
+
+      if (sort === "low-high") {
 
         items.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
 
       }
 
-      if (this.value === "high-low") {
+      if (sort === "high-low") {
 
         items.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
 
       }
 
-      if (this.value === "default") {
-
-        items = originalItems;
-
-      }
+      gallery.innerHTML = "";
 
       items.forEach(item => gallery.appendChild(item));
 
-    });
+    }
+
+    categoryFilter.addEventListener("change", updateGallery);
+
+    sortPrice.addEventListener("change", updateGallery);
 
   </script>
 
