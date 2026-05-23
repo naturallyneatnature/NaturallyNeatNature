@@ -248,6 +248,40 @@
 
     }
 
+    .payment-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 15px;
+
+      justify-content: center;
+
+      margin-top: 20px;
+
+    }
+
+    .payment-note {
+
+      margin-top: 25px;
+
+      color: #ccc;
+
+      font-size: 0.95rem;
+
+      line-height: 1.6;
+
+    }
+
+    .payment-note a {
+
+      color: #8dc63f;
+
+      font-weight: bold;
+
+    }
+
     .social-links {
 
       margin-top: 20px;
@@ -269,12 +303,6 @@
       text-decoration: none;
 
       font-weight: bold;
-
-    }
-
-    .social-links a:hover {
-
-      text-decoration: underline;
 
     }
 
@@ -840,17 +868,47 @@
 
   <section id="prints">
 
-    <h2>Prints For Sale</h2>
+    <h2>Order Prints</h2>
 
     <div class="card">
 
-      <p>High-quality nature and wildlife prints are available for home décor, gifts, collectors, and outdoor enthusiasts.</p>
+      <p>To order, send a print request first. Then complete payment using Venmo or PayPal. Please include your full name and photograph name/ID in the payment note or comment.</p>
 
       <a class="btn" href="mailto:naturallyneatnature@gmail.com?subject=Order%20Print&body=Full%20Name:%0A%0APhotograph%20Name%20or%20ID:%0A%0AMailing%20Address:%0A%0APrint%20Size:%0A%0AAdditional%20Notes:">
 
-        Order Prints
+        Send Print Request
 
       </a>
+
+      <div class="payment-links">
+
+        <a class="btn" href="https://venmo.com/u/NaturallyNeatNature" target="_blank">
+
+          Pay with Venmo
+
+        </a>
+
+        <a class="btn" href="https://www.paypal.com/invoice/p/#NL9B93TNR7UTXF2M" target="_blank">
+
+          Pay with PayPal
+
+        </a>
+
+      </div>
+
+      <p class="payment-note">
+
+        Please include your full name and photograph name/ID in the payment note or comment so your payment can be matched to your order.
+
+        Orders are manually fulfilled by a third-party fulfillment center, typically VistaPrint.
+
+        Damaged or missing orders may need to be addressed through the fulfillment provider.
+
+        Please review VistaPrint’s
+
+        <a href="https://www.vistaprint.com/terms-of-use" target="_blank">Terms and Conditions</a>.
+
+      </p>
 
     </div>
 
