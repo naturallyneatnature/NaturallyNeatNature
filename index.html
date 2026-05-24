@@ -4,992 +4,298 @@
 
 <head>
 
-  <meta charset="UTF-8" />
+<meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NaturallyNeatNature Photography</title>
+<title>NaturallyNeatNature Photography</title>
 
-  <style>
+<style>
 
-    body {
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:#f5f5f5}
 
-      margin: 0;
+header{min-height:90vh;background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),url("IMG_4072.jpeg");background-size:auto 125%;background-position:center top;background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
 
-      font-family: Arial, sans-serif;
+header h1{font-size:clamp(2.2rem,7vw,4.5rem);margin-bottom:10px;line-height:1.05}
 
-      background: #111;
+header p{font-size:1.2rem;max-width:650px;margin:auto}
 
-      color: #f5f5f5;
+.btn{display:inline-block;margin-top:25px;padding:14px 24px;background:#7cb342;color:#111;text-decoration:none;font-weight:bold;border-radius:8px}
 
-    }
+section{padding:60px 20px;max-width:1100px;margin:auto}
 
-    header {
+.category-title{text-align:center;padding:60px 20px 20px}
 
-      min-height: 90vh;
+.category-title h2{font-size:2.2rem;margin-bottom:10px}
 
-      background-image:
+.category-title p{max-width:700px;margin:auto;color:#bbb;line-height:1.6}
 
-        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.65)),
+h2{text-align:center;font-size:2rem;margin-bottom:30px}
 
-        url("IMG_4072.jpeg");
+.controls{text-align:center;margin:20px auto 35px}
 
-      background-size: auto 125%;
+.controls label{margin:0 8px;font-weight:bold}
 
-      background-position: center top;
+.controls select{padding:10px 14px;border-radius:8px;border:none;font-size:1rem;margin:8px}
 
-      background-repeat: no-repeat;
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
 
-      display: flex;
+.gallery-item{background:#1a1a1a;border-radius:12px;overflow:hidden}
 
-      align-items: center;
+.gallery img{width:100%;height:260px;object-fit:cover;display:block}
 
-      justify-content: center;
+.photo-info{padding:15px;text-align:center}
 
-      text-align: center;
+.photo-info h3{margin-bottom:8px;font-size:1.1rem}
 
-      padding: 20px;
+.photo-info p{margin:4px 0;color:#ccc}
 
-    }
+.price{color:#8dc63f;font-weight:bold;font-size:1.05rem}
 
-    header h1 {
+.card{background:#1c1c1c;padding:25px;border-radius:12px;text-align:center}
 
-      font-size: clamp(2.2rem, 7vw, 4.5rem);
+.payment-links,.social-links{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:20px}
 
-      margin-bottom: 10px;
+.payment-note{margin-top:25px;color:#ccc;font-size:.95rem;line-height:1.6}
 
-      line-height: 1.05;
+.payment-note a,.social-links a{color:#8dc63f;font-weight:bold}
 
-    }
+.social-links a{text-decoration:none}
 
-    header p {
+footer{text-align:center;padding:30px;background:#000;color:#aaa}
 
-      font-size: 1.2rem;
-
-      max-width: 650px;
-
-      margin: auto;
-
-    }
-
-    .btn {
-
-      display: inline-block;
-
-      margin-top: 25px;
-
-      padding: 14px 24px;
-
-      background: #7cb342;
-
-      color: #111;
-
-      text-decoration: none;
-
-      font-weight: bold;
-
-      border-radius: 8px;
-
-    }
-
-    section {
-
-      padding: 60px 20px;
-
-      max-width: 1100px;
-
-      margin: auto;
-
-    }
-
-    .category-title {
-
-      text-align: center;
-
-      padding: 60px 20px 20px;
-
-    }
-
-    .category-title h2 {
-
-      font-size: 2.2rem;
-
-      margin-bottom: 10px;
-
-    }
-
-    .category-title p {
-
-      max-width: 700px;
-
-      margin: auto;
-
-      color: #bbb;
-
-      line-height: 1.6;
-
-    }
-
-    h2 {
-
-      text-align: center;
-
-      font-size: 2rem;
-
-      margin-bottom: 30px;
-
-    }
-
-    .controls {
-
-      text-align: center;
-
-      margin: 20px auto 35px;
-
-    }
-
-    .controls label {
-
-      margin: 0 8px;
-
-      font-weight: bold;
-
-    }
-
-    .controls select {
-
-      padding: 10px 14px;
-
-      border-radius: 8px;
-
-      border: none;
-
-      font-size: 1rem;
-
-      margin: 8px;
-
-    }
-
-    .gallery {
-
-      display: grid;
-
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-      gap: 18px;
-
-    }
-
-    .gallery-item {
-
-      background: #1a1a1a;
-
-      border-radius: 12px;
-
-      overflow: hidden;
-
-    }
-
-    .gallery img {
-
-      width: 100%;
-
-      height: 260px;
-
-      object-fit: cover;
-
-      display: block;
-
-    }
-
-    .photo-info {
-
-      padding: 15px;
-
-      text-align: center;
-
-    }
-
-    .photo-info h3 {
-
-      margin-bottom: 8px;
-
-      font-size: 1.1rem;
-
-    }
-
-    .photo-info p {
-
-      margin: 4px 0;
-
-      color: #ccc;
-
-    }
-
-    .price {
-
-      color: #8dc63f;
-
-      font-weight: bold;
-
-      font-size: 1.1rem;
-
-    }
-
-    .card {
-
-      background: #1c1c1c;
-
-      padding: 25px;
-
-      border-radius: 12px;
-
-      text-align: center;
-
-    }
-
-    .payment-links {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 15px;
-
-      justify-content: center;
-
-      margin-top: 20px;
-
-    }
-
-    .payment-note {
-
-      margin-top: 25px;
-
-      color: #ccc;
-
-      font-size: 0.95rem;
-
-      line-height: 1.6;
-
-    }
-
-    .payment-note a {
-
-      color: #8dc63f;
-
-      font-weight: bold;
-
-    }
-
-    .social-links {
-
-      margin-top: 20px;
-
-      display: flex;
-
-      justify-content: center;
-
-      gap: 15px;
-
-      flex-wrap: wrap;
-
-    }
-
-    .social-links a {
-
-      color: #8dc63f;
-
-      text-decoration: none;
-
-      font-weight: bold;
-
-    }
-
-    footer {
-
-      text-align: center;
-
-      padding: 30px;
-
-      background: #000;
-
-      color: #aaa;
-
-    }
-
-  </style>
+</style>
 
 </head>
 
 <body>
 
-  <header>
+<header>
 
-    <div>
+<div>
 
-      <h1><span>NaturallyNeatNature</span><br>Photography</h1>
+<h1><span>NaturallyNeatNature</span><br>Photography</h1>
 
-      <p>Nature and wildlife photography prints capturing forests, mountains, rivers, landscapes, and quiet moments in the wild.</p>
+<p>Nature and wildlife photography prints capturing forests, mountains, rivers, landscapes, and quiet moments in the wild.</p>
 
-      <a class="btn" href="#gallery-section">Explore Gallery</a>
+<a class="btn" href="#gallery-section">Explore Gallery</a>
 
-    </div>
+</div>
 
-  </header>
+</header>
 
-  <section class="category-title" id="gallery-section">
+<section class="category-title" id="gallery-section">
 
-    <h2>Photography Collections</h2>
+<h2>Photography Collections</h2>
 
-    <p>Quiet moments in nature captured through light, atmosphere, wildlife, and wilderness.</p>
+<p>Quiet moments in nature captured through light, atmosphere, wildlife, and wilderness.</p>
 
-  </section>
+</section>
 
-  <section>
+<section>
 
-    <div class="controls">
+<div class="controls">
 
-      <label for="categoryFilter">Category:</label>
+<label for="categoryFilter">Category:</label>
 
-      <select id="categoryFilter">
+<select id="categoryFilter">
 
-        <option value="all">All Photos</option>
+<option value="all">All Photos</option>
 
-        <option value="landscape">Landscape</option>
+<option value="landscape">Landscape</option>
 
-        <option value="swans">Swans</option>
+<option value="swans">Swans</option>
 
-        <option value="bees-butterflies">Bees and Butterflies</option>
+<option value="bees-butterflies">Bees and Butterflies</option>
 
-        <option value="majestic-bald-eagles">Majestic Bald Eagles</option>
+<option value="majestic-bald-eagles">Majestic Bald Eagles</option>
 
-      </select>
+</select>
 
-      <label for="sortPrice">Sort:</label>
+<label for="sortPrice">Sort:</label>
 
-      <select id="sortPrice">
+<select id="sortPrice">
 
-        <option value="default">Default</option>
+<option value="default">Default</option>
 
-        <option value="low-high">Price Low to High</option>
+<option value="az">Name A to Z</option>
 
-        <option value="high-low">Price High to Low</option>
+<option value="za">Name Z to A</option>
 
-      </select>
+</select>
 
-    </div>
+</div>
 
-    <div class="gallery">
+<div class="gallery">
 
-            <div class="gallery-item" data-category="landscape" data-price="60">
+<div class="gallery-item" data-category="landscape" data-name="Contrast"><img src="2.jpeg" alt="Contrast"><div class="photo-info"><h3>Contrast</h3><p>8x10 / 8x12 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        <img src="2.jpeg" alt="Contrast">
+<div class="gallery-item" data-category="landscape" data-name="Dark Winter"><img src="IMG_2570.jpeg" alt="Dark Winter"><div class="photo-info"><h3>Dark Winter</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        <div class="photo-info">
+<div class="gallery-item" data-category="landscape" data-name="Blue Fog Tree"><img src="IMG_4072.jpeg" alt="Blue Fog Tree"><div class="photo-info"><h3>Blue Fog Tree</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <h3>Contrast</h3>
+<div class="gallery-item" data-category="landscape" data-name="Falls Rainbow"><img src="IMG_4280.jpeg" alt="Falls Rainbow"><div class="photo-info"><h3>Falls Rainbow</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <p>8x12 Hi-Res Print • No Watermark</p>
+<div class="gallery-item" data-category="landscape" data-name="Intrigue"><img src="IMG_4079.jpeg" alt="Intrigue"><div class="photo-info"><h3>Intrigue</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <p class="price">$60.00</p>
+<div class="gallery-item" data-category="landscape" data-name="Niagara"><img src="IMG_4338.jpeg" alt="Niagara"><div class="photo-info"><h3>Niagara</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        </div>
+<div class="gallery-item" data-category="landscape" data-name="In Bloom"><img src="IMG_5623.jpeg" alt="In Bloom"><div class="photo-info"><h3>In Bloom</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-      </div>
+<div class="gallery-item" data-category="landscape" data-name="Golden"><img src="IMG_6651.jpeg" alt="Golden"><div class="photo-info"><h3>Golden</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-      <div class="gallery-item" data-category="landscape" data-price="45">
+<div class="gallery-item" data-category="landscape" data-name="Barn Sunset"><img src="IMG_6654.jpeg" alt="Barn Sunset"><div class="photo-info"><h3>Barn Sunset</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        <img src="IMG_2570.jpeg" alt="Dark Winter">
+ <div class="gallery-item" data-category="landscape" data-name="Winter Hall"><img src="IMG_7666.jpeg" alt="Winter Hall"><div class="photo-info"><h3>Winter Hall</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        <div class="photo-info">
+<div class="gallery-item" data-category="landscape" data-name="Wonderland"><img src="IMG_7799.jpeg" alt="Wonderland"><div class="photo-info"><h3>Wonderland</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <h3>Dark Winter</h3>
+<div class="gallery-item" data-category="landscape" data-name="Compass End"><img src="IMG_9475.jpeg" alt="Compass End"><div class="photo-info"><h3>Compass End</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <p>8x10 Hi-Res Print • No Watermark</p>
+<div class="gallery-item" data-category="swans" data-name="Winter Bay"><img src="IMG_9200.jpeg" alt="Winter Bay"><div class="photo-info"><h3>Winter Bay</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <p class="price">$45.00</p>
+<div class="gallery-item" data-category="swans" data-name="Love Story"><img src="IMG_8360-Enhanced-NR.jpeg" alt="Love Story"><div class="photo-info"><h3>Love Story</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        </div>
+<div class="gallery-item" data-category="swans" data-name="Peace"><img src="IMG_5217.jpeg" alt="Peace"><div class="photo-info"><h3>Peace</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-      </div>
+<div class="gallery-item" data-category="swans" data-name="First Light"><img src="IMG_3973-Enhanced-NR.jpeg" alt="First Light"><div class="photo-info"><h3>First Light</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-      <div class="gallery-item" data-category="landscape" data-price="45">
+<div class="gallery-item" data-category="bees-butterflies" data-name="Monarch"><img src="IMG_7664-Enhanced-NR.jpeg" alt="Monarch"><div class="photo-info"><h3>Monarch</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        <img src="IMG_4072.jpeg" alt="Blue Fog Tree">
+<div class="gallery-item" data-category="bees-butterflies" data-name="The Bee and Butterfly"><img src="IMG_7661-Enhanced-NR.jpeg" alt="The Bee and Butterfly"><div class="photo-info"><h3>The Bee and Butterfly</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        <div class="photo-info">
+<div class="gallery-item" data-category="bees-butterflies" data-name="Buzy"><img src="IMG_6617.jpeg" alt="Buzy"><div class="photo-info"><h3>Buzy</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <h3>Blue Fog Tree</h3>
+<div class="gallery-item" data-category="bees-butterflies" data-name="Intimate Butterfly"><img src="IMG_2373-Enhanced-NR.jpeg" alt="Intimate Butterfly"><div class="photo-info"><h3>Intimate Butterfly</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <p>8x10 Hi-Res Print • No Watermark</p>
+<div class="gallery-item" data-category="majestic-bald-eagles" data-name="Endurance"><img src="IMG_2702-Enhanced-NR.jpeg" alt="Endurance"><div class="photo-info"><h3>Endurance</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <p class="price">$45.00</p>
+<div class="gallery-item" data-category="majestic-bald-eagles" data-name="Zoned"><img src="IMG_8899-2.jpeg" alt="Zoned"><div class="photo-info"><h3>Zoned</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        </div>
+<div class="gallery-item" data-category="majestic-bald-eagles" data-name="Winter Cruise"><img src="IMG_8551.jpeg" alt="Winter Cruise"><div class="photo-info"><h3>Winter Cruise</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-      </div>
+<div class="gallery-item" data-category="majestic-bald-eagles" data-name="Coming in Hot"><img src="IMG_6840.jpeg" alt="Coming in Hot"><div class="photo-info"><h3>Coming in Hot</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-      <div class="gallery-item" data-category="landscape" data-price="35">
+<div class="gallery-item" data-category="majestic-bald-eagles" data-name="Pursuit"><img src="IMG_4952-Enhanced-NR.jpeg" alt="Pursuit"><div class="photo-info"><h3>Pursuit</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        <img src="IMG_4280.jpeg" alt="Falls Rainbow">
+<div class="gallery-item" data-category="majestic-bald-eagles" data-name="Overwatch"><img src="IMG_4302-Enhanced-NR.jpeg" alt="Overwatch"><div class="photo-info"><h3>Overwatch</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        <div class="photo-info">
+<div class="gallery-item" data-category="majestic-bald-eagles" data-name="Locked"><img src="IMG_3650.jpeg" alt="Locked"><div class="photo-info"><h3>Locked</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <h3>Falls Rainbow</h3>
+<div class="gallery-item" data-category="majestic-bald-eagles" data-name="Hero"><img src="IMG_3656.jpeg" alt="Hero"><div class="photo-info"><h3>Hero</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <p>8x10 Hi-Res Print • No Watermark</p>
+<div class="gallery-item" data-category="majestic-bald-eagles" data-name="Devour"><img src="IMG_3018-Enhanced-NR.jpeg" alt="Devour"><div class="photo-info"><h3>Devour</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-          <p class="price">$35.00</p>
+<div class="gallery-item" data-category="majestic-bald-eagles" data-name="Approach"><img src="IMG_2872.jpeg" alt="Approach"><div class="photo-info"><h3>Approach</h3><p>8x10 prints available</p><p class="price">Current pricing in Pixieset</p></div></div>
 
-        </div>
+</div>
 
-      </div>
+</section>
 
-      <div class="gallery-item" data-category="landscape" data-price="60">
+<section id="prints">
 
-        <img src="IMG_4079.jpeg" alt="Intrigue">
+<h2>Order Prints</h2>
 
-        <div class="photo-info">
+<div class="card">
 
-          <h3>Intrigue</h3>
+<p>Print orders are now handled through the NaturallyNeatNature Pixieset store. Visit the store to view current 8x10 pricing, available products, checkout options, and fulfillment details.</p>
 
-          <p>8x10 Hi-Res Print • No Watermark</p>
+<a class="btn" href="https://BenjaminStOnge.pixieset.com/" target="_blank">Shop Prints on Pixieset</a>
 
-          <p class="price">$60.00</p>
+<a class="btn" href="mailto:naturallyneatnature@gmail.com?subject=FanMail">Message the Photographer</a>
 
-        </div>
+<h3>Donate Here</h3>
 
-      </div>
+<div class="payment-links">
 
-      <div class="gallery-item" data-category="landscape" data-price="35">
+<a class="btn" href="https://venmo.com/u/NaturallyNeatNature" target="_blank">Donate with Venmo</a>
 
-        <img src="IMG_4338.jpeg" alt="Niagara">
+<a class="btn" href="https://www.paypal.com/invoice/p/#NL9B93TNR7UTXF2M" target="_blank">Donate with PayPal</a>
 
-        <div class="photo-info">
+</div>
 
-          <h3>Niagara</h3>
+<p class="payment-note">Donations are optional and separate from print purchases.</p>
 
-          <p>8x10 Hi-Res Print • No Watermark</p>
+</div>
 
-          <p class="price">$35.00</p>
+</section>
 
-        </div>
+<section>
 
-      </div>
+<h2>About</h2>
 
-      <div class="gallery-item" data-category="landscape" data-price="45">
+<div class="card">
 
-        <img src="IMG_5623.jpeg" alt="In Bloom">
+<p>NaturallyNeatNature shares the beauty of the outdoors through photography, video, and peaceful moments from nature.</p>
 
-        <div class="photo-info">
+<div class="social-links">
 
-          <h3>In Bloom</h3>
+<a href="https://www.youtube.com/@naturallyneatnature" target="_blank">YouTube</a>
 
-          <p>8x10 Hi-Res Print • No Watermark</p>
+<a href="https://www.instagram.com/naturallyneatnature?igsh=MTA2M2kwenZqY2VlNg%3D%3D&utm_source=qr" target="_blank">Instagram</a>
 
-          <p class="price">$45.00</p>
+<a href="https://www.facebook.com/share/17MZKgMVhP/?mibextid=wwXIfr" target="_blank">Facebook</a>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
-      <div class="gallery-item" data-category="landscape" data-price="35">
+</section>
 
-        <img src="IMG_6651.jpeg" alt="Golden">
+<footer>
 
-        <div class="photo-info">
+<p>© 2026 NaturallyNeatNature. All rights reserved.</p>
 
-          <h3>Golden</h3>
+</footer>
 
-          <p>8x10 Hi-Res Print • No Watermark</p>
+<script>
 
-          <p class="price">$35.00</p>
+const categoryFilter=document.getElementById("categoryFilter");
 
-        </div>
+const sortPrice=document.getElementById("sortPrice");
 
-      </div>
+const gallery=document.querySelector(".gallery");
 
-      <div class="gallery-item" data-category="landscape" data-price="40">
+const originalItems=Array.from(gallery.querySelectorAll(".gallery-item"));
 
-        <img src="IMG_6654.jpeg" alt="Barn Sunset">
+function updateGallery(){
 
-        <div class="photo-info">
+let items=[...originalItems];
 
-          <h3>Barn Sunset</h3>
+const category=categoryFilter.value;
 
-          <p>8x10 Hi-Res Print • No Watermark</p>
+const sort=sortPrice.value;
 
-          <p class="price">$40.00</p>
+if(category!=="all"){
 
-        </div>
+items=items.filter(item=>item.dataset.category===category);
 
-      </div>
+}
 
-      <div class="gallery-item" data-category="landscape" data-price="55">
+if(sort==="az"){
 
-        <img src="IMG_7666.jpeg" alt="Winter Hall">
+items.sort((a,b)=>a.dataset.name.localeCompare(b.dataset.name));
 
-        <div class="photo-info">
+}
 
-          <h3>Winter Hall</h3>
+if(sort==="za"){
 
-          <p>8x10 Hi-Res Print • No Watermark</p>
+items.sort((a,b)=>b.dataset.name.localeCompare(a.dataset.name));
 
-          <p class="price">$55.00</p>
+}
 
-        </div>
+gallery.innerHTML="";
 
-      </div>
+items.forEach(item=>gallery.appendChild(item));
 
-      <div class="gallery-item" data-category="landscape" data-price="65">
+}
 
-        <img src="IMG_7799.jpeg" alt="Wonderland">
+categoryFilter.addEventListener("change",updateGallery);
 
-        <div class="photo-info">
+sortPrice.addEventListener("change",updateGallery);
 
-          <h3>Wonderland</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$65.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="landscape" data-price="65">
-
-        <img src="IMG_9475.jpeg" alt="Compass End">
-
-        <div class="photo-info">
-
-          <h3>Compass End</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$65.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="swans" data-price="30">
-
-        <img src="IMG_9200.jpeg" alt="Winter Bay">
-
-        <div class="photo-info">
-
-          <h3>Winter Bay</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$30.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="swans" data-price="45">
-
-        <img src="IMG_8360-Enhanced-NR.jpeg" alt="Love Story">
-
-        <div class="photo-info">
-
-          <h3>Love Story</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$45.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="swans" data-price="40">
-
-        <img src="IMG_5217.jpeg" alt="Peace">
-
-        <div class="photo-info">
-
-          <h3>Peace</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$40.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="swans" data-price="45">
-
-        <img src="IMG_3973-Enhanced-NR.jpeg" alt="First Light">
-
-        <div class="photo-info">
-
-          <h3>First Light</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$45.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="bees-butterflies" data-price="35">
-
-        <img src="IMG_7664-Enhanced-NR.jpeg" alt="Monarch">
-
-        <div class="photo-info">
-
-          <h3>Monarch</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$35.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="bees-butterflies" data-price="40">
-
-        <img src="IMG_7661-Enhanced-NR.jpeg" alt="The Bee and Butterfly">
-
-        <div class="photo-info">
-
-          <h3>The Bee and Butterfly</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$40.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="bees-butterflies" data-price="35">
-
-        <img src="IMG_6617.jpeg" alt="Buzy">
-
-        <div class="photo-info">
-
-          <h3>Buzy</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$35.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="bees-butterflies" data-price="40">
-
-        <img src="IMG_2373-Enhanced-NR.jpeg" alt="Intimate Butterfly">
-
-        <div class="photo-info">
-
-          <h3>Intimate Butterfly</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$40.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="majestic-bald-eagles" data-price="65">
-
-        <img src="IMG_2702-Enhanced-NR.jpeg" alt="Endurance">
-
-        <div class="photo-info">
-
-          <h3>Endurance</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$65.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="majestic-bald-eagles" data-price="55">
-
-        <img src="IMG_8899-2.jpeg" alt="Zoned">
-
-        <div class="photo-info">
-
-          <h3>Zoned</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$55.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="majestic-bald-eagles" data-price="60">
-
-        <img src="IMG_8551.jpeg" alt="Winter Cruise">
-
-        <div class="photo-info">
-
-          <h3>Winter Cruise</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$60.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="majestic-bald-eagles" data-price="40">
-
-        <img src="IMG_6840.jpeg" alt="Coming in Hot">
-
-        <div class="photo-info">
-
-          <h3>Coming in Hot</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$40.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="majestic-bald-eagles" data-price="60">
-
-        <img src="IMG_4952-Enhanced-NR.jpeg" alt="Pursuit">
-
-        <div class="photo-info">
-
-          <h3>Pursuit</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$60.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="majestic-bald-eagles" data-price="55">
-
-        <img src="IMG_4302-Enhanced-NR.jpeg" alt="Overwatch">
-
-        <div class="photo-info">
-
-          <h3>Overwatch</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$55.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="majestic-bald-eagles" data-price="40">
-
-        <img src="IMG_3650.jpeg" alt="Locked">
-
-        <div class="photo-info">
-
-          <h3>Locked</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$40.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="majestic-bald-eagles" data-price="55">
-
-        <img src="IMG_3656.jpeg" alt="Hero">
-
-        <div class="photo-info">
-
-          <h3>Hero</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$55.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="majestic-bald-eagles" data-price="45">
-
-        <img src="IMG_3018-Enhanced-NR.jpeg" alt="Devour">
-
-        <div class="photo-info">
-
-          <h3>Devour</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$45.00</p>
-
-        </div>
-
-      </div>
-
-      <div class="gallery-item" data-category="majestic-bald-eagles" data-price="40">
-
-        <img src="IMG_2872.jpeg" alt="Approach">
-
-        <div class="photo-info">
-
-          <h3>Approach</h3>
-
-          <p>8x10 Hi-Res Print • No Watermark</p>
-
-          <p class="price">$40.00</p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section id="prints">
-
-    <h2>Order Prints</h2>
-
-    <div class="card">
-
-      <p>To order, send a print request first. Then complete payment using Venmo or PayPal. Please include your full name and photograph name/ID in the payment note or comment.</p>
-
-      <a class="btn" href="mailto:naturallyneatnature@gmail.com?subject=Order%20Print&body=Full%20Name:%0A%0APhotograph%20Name%20or%20ID:%0A%0AMailing%20Address:%0A%0APrint%20Size:%0A%0AAdditional%20Notes:">
-
-        Send Print Request
-
-      </a>
-
-      <div class="payment-links">
-
-        <a class="btn" href="https://venmo.com/u/NaturallyNeatNature" target="_blank">
-
-          Pay with Venmo
-
-        </a>
-
-        <a class="btn" href="https://www.paypal.com/invoice/p/#NL9B93TNR7UTXF2M" target="_blank">
-
-          Pay with PayPal
-
-        </a>
-
-      </div>
-
-      <p class="payment-note">
-
-        Please include your full name and photograph name/ID in the payment note or comment so your payment can be matched to your order.
-
-        Orders are manually fulfilled by a third-party fulfillment center, typically VistaPrint.
-
-        Damaged or missing orders may need to be addressed through the fulfillment provider.
-
-        Please review VistaPrint’s
-
-        <a href="https://www.vistaprint.com/terms-of-use" target="_blank">Terms and Conditions</a>.
-
-      </p>
-
-    </div>
-
-  </section>
-
-  <section>
-
-    <h2>About</h2>
-
-    <div class="card">
-
-      <p>NaturallyNeatNature shares the beauty of the outdoors through photography, video, and peaceful moments from nature.</p>
-
-      <div class="social-links">
-
-        <a href="https://www.youtube.com/@naturallyneatnature" target="_blank">YouTube</a>
-
-        <a href="https://www.instagram.com/naturallyneatnature?igsh=MTA2M2kwenZqY2VlNg%3D%3D&utm_source=qr" target="_blank">Instagram</a>
-
-        <a href="https://www.facebook.com/share/17MZKgMVhP/?mibextid=wwXIfr" target="_blank">Facebook</a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <footer>
-
-    <p>© 2026 NaturallyNeatNature. All rights reserved.</p>
-
-  </footer>
-
-  <script>
-
-    const categoryFilter = document.getElementById("categoryFilter");
-
-    const sortPrice = document.getElementById("sortPrice");
-
-    const gallery = document.querySelector(".gallery");
-
-    const originalItems = Array.from(gallery.querySelectorAll(".gallery-item"));
-
-    function updateGallery() {
-
-      let items = [...originalItems];
-
-      const category = categoryFilter.value;
-
-      const sort = sortPrice.value;
-
-      if (category !== "all") {
-
-        items = items.filter(item => item.dataset.category === category);
-
-      }
-
-      if (sort === "low-high") {
-
-        items.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
-
-      }
-
-      if (sort === "high-low") {
-
-        items.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
-
-      }
-
-      gallery.innerHTML = "";
-
-      items.forEach(item => gallery.appendChild(item));
-
-    }
-
-    categoryFilter.addEventListener("change", updateGallery);
-
-    sortPrice.addEventListener("change", updateGallery);
-
-  </script>
+</script>
 
 </body>
 
-</html>
+</html> 
